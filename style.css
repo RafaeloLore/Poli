@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  background: rgb(122, 120, 120);
+  transition: 1s;
+}
+ul li:nth-child(odd) {
+  background-color: aliceblue;
+}
+ul li.checked {
+  background: rgb(149, 157, 165);
+  color: #fff;
+  text-decoration: line-through;
+}
