@@ -1,92 +1,58 @@
-* {
+*,
+*::before
+*::after{
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
-ul {
-  margin: 0;
-  padding: 0;
+body{
+  height: 100vh;
+  background: #9dc8f2;
 }
-/*style elemente*/
-ul li {
-  cursor: pointer;
+.container{
+  width: 40%;
+  top: 50%;
+  left: 50%;
+  background: white;
+  border-radius: 10px;
+  min-width: 450px;
+  position: absolute;
+  min-height: 100px;
+  transform: translate(-50%,-50%);
+}
+#newtask{
   position: relative;
-  padding: 12px 8px 12px 40px;
-  background: rgb(122, 120, 120);
-  transition: 1s;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+  padding: 30px 20px;
 }
-/*fon intunecta hover*/
-ul li:nth-child(odd) {
-  background-color: aliceblue;
+#newtask input{
+  width: 75%;
+  height: 45px;
+  padding: 12px;
+  color: #111111;
+  font-weight: 500;
+  position: relative;
+  border-radius: 5px;
+  font-family: 'Poppins',sans-serif;
+  font-size: 15px;
+  border: 2px solid #d1d3d4;
 }
-/*add la apesare culoare la fon si strike text*/
-ul li.checked {
-  background: rgb(149, 157, 165);
-  color: #fff;
-  text-decoration: line-through;
+
+#newtask input:focus{
+  outline: none;
+  border-color: #0d75ec;
 }
-/*add bifa la click*/
-ul li.checked::before {
-  content: "";
-  position: absolute;
-  border-color: #fff;
-  border-style: solid;
-  mask-border-width: 0 2px 2px 0;
-  top: 10px;
-  left: 16px;
-  transform: rotate(45deg);
-  height: 15px;
-  width: 7px;
-}
-/*style button close*/
-.close {
-  position: absolute;
-  right: 0;
-  top: 0;
-  padding: 12px 16px 12px 16px;
-}
-.close:hover {
-  background-color: #8cabdb;
-  color: white;
-}
-/*stle header*/
-.header {
-  background-color: greenyellow;
-  padding: 30px 50px;
-  color: white;
-  text-align: center;
-}
-/* stesrge(need test)*/
-.header::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-/*style input*/
-input {
-  margin: 0;
-  border: none;
-  border-radius: 0;
-  width: 80%;
-  padding: 10px;
-  float: left;
-  font-size: 20px;
-}
-/*stle add button*/
-.addBtn {
-  padding: 10px;
-  width: 20%;
-  background: #fac941;
-  color: #555;
-  float: left;
-  text-align: center;
+#newtask button{
+  position: relative;
+  float: right;
+  font-weight: 500;
   font-size: 16px;
+  background-color: #0d75ec;
+  border: none;
+  color: #ffffff;
   cursor: pointer;
-  transition: 0, 3s;
-  border-radius: 0;
-}
-.addBtn:hover {
-  background-color: #bbb;
+  outline: none;
+  width: 20%;
+  height: 45px;
+  border-radius: 5px;
+  font-family: 'Poppins',sans-serif;
 }
