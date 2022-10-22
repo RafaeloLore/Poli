@@ -1,26 +1,17 @@
-let div = document.querySelector("div");
-console.log(div);
-let button = document.querySelector("button");
-let input = document.getElementById("inmail");
-button.addEventListener("click", () => {
-  console.log(input.value);
-  if (input.value.length < 2) {
-    alert("min6");
-  }
-  if (inname.value.length < 2) {
-    alert("MinamFname5");
-  }
-  if (inuser.value.length < 2) {
-    alert("Nr3");
-  }
-  if (inpassword.value.length < 2) {
-    alert("password");
-  }
-  if (username.value.length < 3) {
-    alert("username");
-  }
-});
-let inname = document.getElementById("inname");
-let inuser = document.getElementById("inuser");
-let inpassword = document.getElementById("inpassword");
-let username = document.getElementById("username");
+var start = document.getElementById("start").value;
+var end = document.getElementById("end").value;
+
+function diff(start, end) {
+    start = start.split(":");
+    end = end.split(":");
+    var startDate = new Date(0, 0, 0, start[0], start[1], 0);
+    var endDate = new Date(0, 0, 0, end[0], end[1], 0);
+    var diff = endDate.getTime() - startDate.getTime();
+    var hours = Math.floor(diff / 1000 / 60 / 60);
+    diff -= hours * 1000 * 60 * 60;
+    var minutes = Math.floor(diff / 1000 / 60);
+    
+    return (hours < 9 ? "0" : "") + hours + ":" + (minutes < 9 ? "0" : "") + minutes;
+}
+
+document.getElementById("diff").value = diff(start, end);
